@@ -4,7 +4,7 @@
 The rest API to fetch user_profiles is `/users/getUserProfiles?pageNumber=1`. The GET Request
 takes in the parameter `pageNumber= type Number` starting from index 1. The reason I added this parameter was to let 
 the client download all documents since the query is limited to 50 at a time. For 
-example, this request will return will 50 first documents for index 1, then 51 to 100 documents for index 2 and so on.
+example, this request will return first 50 documents for index 1, then 51 to 100 documents for index 2 and so on.
 
 ### Technologies used for this challenge
 Express JS, Node JS, Google Firestone DB
