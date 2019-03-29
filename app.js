@@ -8,6 +8,7 @@ const usersRouter = require('./routes/users');
 
 const app = express();
 
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
@@ -35,5 +36,12 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+const port = process.env.PORT || 3000;
+const httpServer = require('http').createServer(app);
+httpServer.listen(port,()=>{
+  console.log('server running on port ' + port + '.');
+});
+
 
 module.exports = app;
